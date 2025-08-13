@@ -6,9 +6,9 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 
 function App() {
-  const [account, setAccount] = useState(""); // address actual conectada desde MetaMask
+  const [account, setAccount] = useState(""); // address/wallet actual conectada desde MetaMask
   const [chainId, setChainId] = useState(null); // ID de la red (1337)
-  const [calculatorContract, setCalculatorContract] = useState(null); // un contrato calculadora
+  const [contracts, setContracts] = useState({}); // los contratos
 
   const connect = async () => {
     try {
@@ -23,8 +23,14 @@ function App() {
       }
 
       // obtener el contrato con el nombre del contrato y el ID de la red
-      const calcContract = getContract("Calculator", chainId);
-      setCalculatorContract(calcContract);
+      const loadContracts = {
+        registro: getContract("ContratoRegistro", chainId),
+        acceso: getContract("ContratoControlAcceso", chainId),
+        curso: getContract("ContratoCursos", chainId),
+        finanza: getContract("ContratoFinanzas", chainId),
+        auditoria: getContract("ContratoAuditoria", chainId),
+      }
+      setCalculatorContract(loadContracts);
     } catch (err) {
       console.error("Error de conexión:", err);
     }

@@ -1,10 +1,18 @@
 import { ethers } from "ethers";
 import { CONTRACT_ADDRESSES } from "./addresses";
-import CursoABI from "../contracts/contratoCursoABI";
+
+import RegistroABI from "../contracts/registroABI";
+import AccesoABI from "../contracts/accesoABI";
+import CursoABI from "../contracts/cursoABI";
+import FinanzaABI from "../contracts/finanzaABI";
+import AuditoriaABI from "../contracts/auditoriaABI";
 
 const ABIs = {
+    ContratoRegistro: RegistroABI,
+    ContratoAcceso: AccesoABI,
     ContratoCurso: CursoABI,
-    // otro contrato
+    ContratoFinanza: FinanzaABI,
+    ContratoAuditoria: AuditoriaABI
 };
 
 // url de la red de Ganache
