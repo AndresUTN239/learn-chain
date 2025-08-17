@@ -6,6 +6,8 @@ import AccesoABI from "../contracts/accesoABI";
 import CursoABI from "../contracts/cursoABI";
 import FinanzaABI from "../contracts/finanzaABI";
 import AuditoriaABI from "../contracts/auditoriaABI";
+import IregistroABI from "../contracts/IregistroABI";
+import IcursoABI from "../contracts/IcursoABI";
 
 const ABIs = {
   ContratoRegistro: RegistroABI,
@@ -13,6 +15,8 @@ const ABIs = {
   ContratoCurso: CursoABI,
   ContratoFinanza: FinanzaABI,
   ContratoAuditoria: AuditoriaABI,
+  InterfazRegistro: IregistroABI,
+  InterfazCurso: IcursoABI,
 };
 
 // url de la red de Ganache

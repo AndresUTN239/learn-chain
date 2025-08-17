@@ -1,9 +1,11 @@
 import logo from "../logo.svg";
 import '../App.css';
 
-export default function Home() {
+export default function Home({setShowLayout}) {
+  setShowLayout(true);
+
   return (
-    <div className="App">
+    <div className="App bg-dark-gray">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>Edit <code>src/App.js</code> and save to reload.</p>

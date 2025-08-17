@@ -4,11 +4,18 @@ import { getContract, connectWallet, switchToGanache } from "./config/conection.
 import Layout from "./components/Layout"
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Login from "./pages/Login";
+import "./css/style.css";
+import "./css/backgroundAnimated.css";
 
 function App() {
+  // variables de contratos
   const [account, setAccount] = useState(""); // address/wallet actual conectada desde MetaMask
   const [chainId, setChainId] = useState(null); // ID de la red (1337)
   const [contracts, setContracts] = useState({}); // los contratos
+
+  // variables estéticos de la dApp
+  const [showLayout, setShowLayout] = useState(true); // boleano que indica si mostrar "header" y "footer" en la página
 
   const connect = async () => {
     try {
@@ -46,10 +53,11 @@ function App() {
 
   return (
     <Router>
-      <Layout>
+      <Layout showLayout={showLayout}>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/" element={<Home setShowLayout={setShowLayout}/>} />
+          <Route path="/about" element={<About setShowLayout={setShowLayout} />} />
+          <Route path="/login" element={<Login setShowLayout={setShowLayout} />} />
         </Routes>
       </Layout>
     </Router>
