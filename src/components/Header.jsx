@@ -3,7 +3,7 @@ import Nav from './Nav';
 
 function Header() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-gray">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-gray header-dapp">
       <div className="container">
         <Logo />
         <button className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
