@@ -1,8 +1,8 @@
 function Footer() {
   return (
-    <footer className="bg-dark text-light text-center py-3 mt-auto">
+    <footer className="bg-gray text-light text-center py-3 mt-auto">
       <div className="container">
-        <p className="mb-0">LearnChain</p>
+        <p className="mb-0">LearnChain © 2025. Todos los derechos reservados.</p>
       </div>
     </footer>
   );

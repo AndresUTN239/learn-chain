@@ -1,0 +1,375 @@
+/*
+-> Layouts
+*/
+.header-dapp {
+  border-bottom: 2px solid #7c3aed;
+}
+
+.sidebar-dapp {
+  border-right: 2px solid #fff;
+  background-color: #7c3aed;
+}
+
+/*Enlace del sidebar*/
+.btn-sidebar-dapp-outline {
+  background-color: transparent;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease;
+  z-index: 1;
+}
+
+.btn-sidebar-dapp-outline::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #111827;
+  color: #7c3aed;
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
+.btn-sidebar-dapp-outline:hover::after {
+  width: 100%;
+}
+
+.btn-sidebar-dapp-outline:hover {
+  color: #7c3aed;
+}
+
+.btn-sidebar-dapp-outline:active::after {
+  background-color: #4a238d;
+}
+
+.btn-sidebar-dapp-outline:visited {
+  color: white;
+}
+
+.btn-sidebar-dapp-outline.active {
+  color: #7c3aed; /* color cuando la ruta está activa */
+}
+
+.btn-sidebar-dapp-outline.active::after {
+  width: 100%;
+  background-color: #111827;
+}
+
+/*
+----------------------------------------------------------------
+-> Fondos
+*/
+.bg-dark-gray {
+  background-color: #111827;
+}
+
+.bg-gray {
+  background-color: #1f2937;
+}
+
+.bg-purple {
+  background-color: #7c3aed;
+}
+
+.bg-aqua {
+  background-color: #06b6d4;
+}
+
+/*
+----------------------------------------------------------------
+-> Cartas
+*/
+.card-dapp {
+  background-color: #1f2937;
+  border: 2px solid #7c3aed;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card-button-dapp {
+  background-color: #1f2937;
+  border: 2px solid #7c3aed;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.card-button-dapp:hover {
+  cursor: pointer;
+  background-color: #1d3336;
+  border: 2px solid #06b6d4;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card-dapp-header {
+  border-bottom: 2px solid #7c3aed;
+}
+
+.card-dapp-body {
+  background-color: #111827;
+}
+
+.card-dapp-footer {
+  border-top: 2px solid #7c3aed;
+}
+
+/*
+----------------------------------------------------------------
+-> Modales
+*/
+.modal-dapp-header {
+  border-bottom: 2px solid #7c3aed;
+}
+
+.modal-dapp-body {
+  background-color: #111827;
+}
+
+.modal-dapp-footer {
+  border-top: 2px solid #7c3aed;
+}
+
+/*
+----------------------------------------------------------------
+-> Tabla
+*/
+.table-dapp {
+  border-radius: 12px;
+  border: 2px solid #7c3aed;
+}
+
+.table-dapp thead {
+  background-color: #622ebb;
+  color: white;
+}
+
+.table-dapp-head {
+  background-color: #7c3aed;
+  color: white;
+}
+
+.table-dapp td, .table-dapp th {
+  padding: 1rem;
+}
+
+.table-dapp-row-even { 
+  background-color: #a278eb; 
+}
+
+.table-dapp-row-even:hover { 
+  background-color: #bea5e9; 
+}
+
+.table-dapp-row-odd { 
+  background-color: #ae8ce9; 
+}
+
+.table-dapp-row-odd:hover { 
+  background-color: #bea5e9; 
+}
+
+/*
+----------------------------------------------------------------
+-> Textos
+*/
+.tx {
+  font: Sans-serif;
+}
+
+.tx-bold {
+  font-weight: bold;
+}
+
+.tx-sm {
+  font-size: 16px;
+}
+
+.tx-md {
+  font-size: 24px;
+}
+
+.tx-lg {
+  font-size: 32px;
+}
+
+.tx-color-purple {
+  color: #7c3aed;
+}
+
+.tx-color-aqua {
+  color: #06b6d4;
+}
+
+.tx-color-header {
+  color: #1f2937;
+}
+
+.tx-color-gray {
+  color: #111827;
+}
+
+.tx-color-black {
+  color: black;
+}
+
+.tx-color-white {
+  color: white;
+}
+
+/*
+----------------------------------------------------------------
+-> Botones
+*/
+.btn-dapp {
+  border-radius: 8px;
+  padding: 4px 8px;
+  margin: 0px;
+}
+
+/*Boton color aqua*/
+.btn-dapp-aqua {
+  background-color: #06b6d4;
+  color: #111827;
+  border: 2px solid #068aa1;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease, border-color 0.3s ease;
+  z-index: 1;
+}
+
+.btn-dapp-aqua::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #068aa1;
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
+.btn-dapp-aqua:hover::after {
+  width: 100%;
+}
+
+.btn-dapp-aqua:hover {
+  color: white;
+  border-color: #056d80;
+}
+
+.btn-dapp-aqua:active::after {
+  background-color: #045664;
+}
+
+/*Boton color morado*/
+.btn-dapp-purple {
+  background-color: #7c3aed;
+  color: #111827;
+  border: 2px solid #622ebb;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease, border-color 0.3s ease;
+  z-index: 1;
+}
+
+.btn-dapp-purple::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #622ebb;
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
+.btn-dapp-purple:hover::after {
+  width: 100%;
+}
+
+.btn-dapp-purple:hover {
+  color: white;
+  border-color: #4a238d;
+}
+
+.btn-dapp-purple:active::after {
+  background-color: #331863;
+}
+
+/*Boton outline color aqua*/
+.btn-dapp-outline-aqua {
+  background-color: transparent;
+  color: #06b6d4;
+  border: 2px solid #06b6d4;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease;
+  z-index: 1;
+}
+
+.btn-dapp-outline-aqua::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #06b6d4;
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
+.btn-dapp-outline-aqua:hover::after {
+  width: 100%;
+}
+
+.btn-dapp-outline-aqua:hover {
+  color: white;
+  border-color: #068aa1;
+}
+
+.btn-dapp-outline-aqua:active::after {
+  background-color: #045664;
+}
+
+/*Boton outline color morado*/
+.btn-dapp-outline-purple {
+  background-color: transparent;
+  color: #7c3aed;
+  border: 2px solid #7c3aed;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease;
+  z-index: 1;
+}
+
+.btn-dapp-outline-purple::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #7c3aed;
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
+.btn-dapp-outline-purple:hover::after {
+  width: 100%;
+}
+
+.btn-dapp-outline-purple:hover {
+  color: white;
+  border-color: #622ebb;
+}
+
+.btn-dapp-outline-purple:active::after {
+  background-color: #4a238d;
+}
