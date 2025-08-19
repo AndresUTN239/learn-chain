@@ -1,19 +1,19 @@
 import { ethers } from "ethers";
 import { CONTRACT_ADDRESSES } from "./addresses";
 
-import RegistroABI from "../contracts/registroABI";
-import AccesoABI from "../contracts/accesoABI";
-import CursoABI from "../contracts/cursoABI";
-import FinanzaABI from "../contracts/finanzaABI";
-import AuditoriaABI from "../contracts/auditoriaABI";
-import IregistroABI from "../contracts/IregistroABI";
-import IcursoABI from "../contracts/IcursoABI";
+import RegistroABI from "../contracts/registroABI.json";
+import AccesoABI from "../contracts/accesoABI.json";
+import CursoABI from "../contracts/cursoABI.json";
+import FinanzaABI from "../contracts/finanzaABI.json";
+import AuditoriaABI from "../contracts/auditoriaABI.json";
+import IregistroABI from "../contracts/IregistroABI.json";
+import IcursoABI from "../contracts/IcursoABI.json";
 
 const ABIs = {
   ContratoRegistro: RegistroABI,
-  ContratoAcceso: AccesoABI,
+  ContratoControlAcceso: AccesoABI,
   ContratoCurso: CursoABI,
-  ContratoFinanza: FinanzaABI,
+  ContratoFinanzas: FinanzaABI,
   ContratoAuditoria: AuditoriaABI,
   InterfazRegistro: IregistroABI,
   InterfazCurso: IcursoABI,

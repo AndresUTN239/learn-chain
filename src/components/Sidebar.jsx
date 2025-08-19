@@ -26,11 +26,6 @@ function Sidebar() {
             Ganancias
           </NavLink>
         </li>
-        <li className="nav-item">
-          <NavLink to="/login" className={linkClass}>
-            Cerrar sesión
-          </NavLink>
-        </li>
       </ul>
     </div>
   );
