@@ -47,7 +47,7 @@ export default function Card({ title, text, img, side = "start", orientation = "
           <div className={`${onClick ? "" : "card-dapp-footer"} mt-auto p-3 d-flex justify-content-between`}>
             {price !== null && <span className="fw-bold tx-sm">Precio: {price}</span>}
             {button && (
-              <Button text={"Comprar"} classes={"btn-dapp btn-dapp-purple tx-sm"} />
+              <Button text={"Comprar"} onClick={button} classes={"btn-dapp btn-dapp-purple tx-sm"} />
             )}
             {subscribers !== null && <span className="tx-sm">Suscriptores: {subscribers}</span>}
           </div>

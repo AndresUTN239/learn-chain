@@ -13,7 +13,7 @@ export default function Table({ headers, rows }) {
           {rows.map((row, rowIndex) => (
             <tr key={rowIndex} className={rowIndex % 2 === 0 ? "table-dapp-row-even" : "table-dapp-row-odd"}>
               {headers.map((header, colIndex) => (
-                <td key={colIndex} className="tx-sm tx-color-gray">
+                <td key={colIndex} className="tx-sm tx-color-gray" style={header === "Opciones" ? {width: '1%'} : undefined}>
                   {header === "ID" || header === "id" || header === "#" ? rowIndex + 1 : row[header] ?? "-"}
                 </td>
               ))}
