@@ -5,7 +5,7 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import { ethers } from "ethers";
 import { callContractFunction } from "../config/conection";
 
-export default function AgregarCurso({ contracts }) {
+export default function AgregarCurso({ contracts, rol }) {
   const navigate = useNavigate();
 
   const [params] = useSearchParams();
@@ -80,7 +80,7 @@ export default function AgregarCurso({ contracts }) {
                 </div>
                 <div className="col-6">
                   <label for="precio" className="tx-sm">Precio:</label>
-                  <input type="number" className="form-control" id="precio" placeholder="ETH" value={precio} onChange={handlePrecio} disabled={loading} />
+                  <input type="number" className={`form-control ${id ? "bg-dark text-white" : ""}`} id="precio" placeholder="ETH" value={precio} onChange={handlePrecio} disabled={loading || id} />
                 </div>
               </div>
               <div className="row mb-3">
@@ -91,11 +91,13 @@ export default function AgregarCurso({ contracts }) {
                   </div>
                 </div>
               </div>
-              <div className="text-center justify-content-center">
-                <Button text={"Volver"} classes={"btn-dapp btn-dapp-outline-aqua tx-sm"} onClick={() => navigate("/admin/cursos")} />
-                <br/>
-                <Button text={!id ? "Crear curso" : "Guardar cambios"} classes={"btn-dapp btn-dapp-aqua tx-sm"} onClick={() => guardarCurso()} />
-              </div>
+              {rol === 2 && (
+                <div className="text-center justify-content-center">
+                  <Button text={"Volver"} classes={"btn-dapp btn-dapp-outline-aqua tx-sm"} onClick={() => navigate("/admin/cursos")} />
+                  <br/>
+                  <Button text={!id ? "Crear curso" : "Guardar cambios"} classes={"btn-dapp btn-dapp-aqua tx-sm"} onClick={() => guardarCurso()} />
+                </div>
+              )}
             </div>
           </div>
         </div>

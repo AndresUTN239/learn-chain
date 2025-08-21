@@ -7,7 +7,7 @@ import { ethers } from "ethers";
 import { callContractFunction } from "../config/conection";
 import Modal from "../components/Modal";
 
-export default function ListaCursos({ contracts, account }) {
+export default function ListaCursos({ contracts, account, rol }) {
   const headers = ["ID", "Curso", "Precio", "Suscriptores", "Opciones"];
 
   const [cursos, setCursos] = useState([]);
@@ -55,7 +55,6 @@ export default function ListaCursos({ contracts, account }) {
       setErr("");
       try {
         const data = await callContractFunction(contracts, "ContratoCurso", "obtenerCursosPorProfesor", [account]);
-        console.log(data);
 
         // `lista` es un array de structs: { id, titulo, descripcion, precio, profesor, inscritosCount }
         const parsed = (data || [])
@@ -119,7 +118,9 @@ export default function ListaCursos({ contracts, account }) {
         <div className="row m-0 mb-4 w-100">
           <div className="text-start card-dapp">
             <div className="container px-4 py-2">
-              <Button text={"Agregar curso"} classes={"btn-dapp btn-dapp-aqua tx-sm"} onClick={() => navigate("/admin/agregarCurso")} />
+              {rol === 2 && (
+                <Button text={"Agregar curso"} classes={"btn-dapp btn-dapp-aqua tx-sm"} onClick={() => navigate("/admin/agregarCurso")} />
+              )}
               {loading && <p className="tx-sm text-white">Buscando cursos…</p>}
               {err && <p className="tx-sm tx-purple">{err}</p>}
               {!loading && !err && cursos.length === 0 && (

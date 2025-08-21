@@ -1,17 +1,17 @@
 export const CONTRACT_ADDRESSES = {
     ContratoRegistro: {
-        1337: "0x8353Ef4D81bF98F7E3d95661828f9dDe6931BE20" // Address del contrato
+        1337: "0x66932Fe41Df78372A28c6F036f5774d5c8f2EBB8" // Address del contrato
     },
     ContratoControlAcceso: {
-        1337: "0xeb90eDD92a219D5D5dB631244Db80cc0b61e4401" // Address del contrato
+        1337: "0x38599b783507932F39d3E95F355BBC539BeDa29D" // Address del contrato
     },
     ContratoCurso: {
-        1337: "0xE4b1a048c14f88DcA1B8e3954C687b4Fa6d51655" // Address del contrato
+        1337: "0xE95AFEf9672E804BEeD1DBDc0D724BcdbBddED6f" // Address del contrato
     },
     ContratoFinanzas: {
-        1337: "0xF1848F6820e7Fd5a668C9e032bd8A728261FBbc2" // Address del contrato
+        1337: "0xFB84a1b526a6F4fb91256bC811BDCF24FE941477" // Address del contrato
     },
     ContratoAuditoria: {
-        1337: "0xaEa09AaBF2421bD9Ff7ECcE35DC177b2D89C74F8" // Address del contrato
+        1337: "0x8F1404C7E2228578ff2065f35C77a2756d0bf6fB" // Address del contrato
     }
 };

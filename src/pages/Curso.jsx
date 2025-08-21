@@ -4,7 +4,7 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import { ethers } from "ethers";
 import { callContractFunction } from "../config/conection";
 
-export default function Curso({ contracts }) {
+export default function Curso({ contracts, rol }) {
   const [params] = useSearchParams();
   const id = Number(params.get("id"));
   const [curso, setCurso] = useState(null);

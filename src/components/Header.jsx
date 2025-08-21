@@ -1,7 +1,7 @@
 import Logo from './Logo';
 import Nav from './Nav';
 
-function Header({ contracts, account, rol }) {
+function Header({ contracts, account, rol, usuario }) {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-gray header-dapp">
       <div className="container">
@@ -10,7 +10,7 @@ function Header({ contracts, account, rol }) {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
-          <Nav contracts={contracts} account={account} rol={rol} />
+          <Nav contracts={contracts} account={account} rol={rol} usuario={usuario} />
         </div>
       </div>
     </nav>
