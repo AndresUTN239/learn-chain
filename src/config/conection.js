@@ -56,9 +56,7 @@ export async function connectWallet() {
   }
 
   // solicita acceso a la cuenta del usuario en MetaMask
-  const accounts = await window.ethereum.request({
-    method: "eth_requestAccounts",
-  });
+  const accounts = await window.ethereum.request({ method: "eth_requestAccounts" });
 
   // obtiene el ID de la red actual a la que está conectada MetaMask en hexadecimal
   const chainIdHex = await window.ethereum.request({ method: "eth_chainId" });
@@ -124,17 +122,11 @@ export async function callContractFunction(contracts, contractName, functionName
     if (isReadOnly) {
       // Función de solo lectura
       const result = await contract[functionName](...params, overrides);
-      console.log(`${contractName}.${functionName}`, result);
       return result;
     } else {
       // Función transaccional
       const tx = await contract[functionName](...params, overrides);
-      console.log(`${contractName}.${functionName}`, tx.hash);
       const receipt = await tx.wait();
-      console.log(
-        `${contractName}.${functionName}`,
-        receipt
-      );
       return receipt;
     }
   } catch (err) {

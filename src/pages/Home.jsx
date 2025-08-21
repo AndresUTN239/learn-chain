@@ -29,7 +29,6 @@ export default function Home({ contracts }) {
       setErr("");
       try {
         const lista = await callContractFunction(contracts, "ContratoCurso", "obtenerCursos");
-        console.log(lista);
 
         // `lista` es un array de structs: { id, titulo, descripcion, precio, profesor, inscritosCount }
         const parsed = (lista || [])

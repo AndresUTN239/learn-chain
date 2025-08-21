@@ -1,10 +1,10 @@
 import Sidebar from "./Sidebar";
 import { Outlet } from "react-router-dom";
 
-function LayoutAdmin() {
+function LayoutAdmin({ rol, loading, err, account, usuario }) {
   return (
     <div className="d-flex">
-      <Sidebar />
+      <Sidebar rol={rol} loading={loading} err={err} account={account} usuario={usuario} />
       <main className="flex-fill p-0">
         {/* Aquí se renderizan las páginas admin */}
         <Outlet />

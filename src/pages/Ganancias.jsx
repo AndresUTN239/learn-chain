@@ -6,7 +6,7 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import { ethers } from "ethers";
 import { callContractFunction } from "../config/conection";
 
-export default function Ganancias({ contracts, account }) {
+export default function Ganancias({ contracts, account, rol }) {
   const headers = ["#", "Curso", "Ingresos", "Suscriptores"];
   
   const [cursos, setCursos] = useState([]);
@@ -107,7 +107,9 @@ export default function Ganancias({ contracts, account }) {
         <div className="row m-0 mb-4 w-100">
           <div className="text-start card-dapp">
             <div className="container px-4 py-2">
-              <Button text={"Retirar fondos"} classes={"btn-dapp btn-dapp-aqua tx-sm"} onClick={() => retirarFondos()} />
+              {rol === 2 && (
+                <Button text={"Retirar fondos"} classes={"btn-dapp btn-dapp-aqua tx-sm"} onClick={() => retirarFondos()} />
+              )}
               {loading && <p className="tx-sm text-white">Buscando cursos…</p>}
               {err && <p className="tx-sm tx-purple">{err}</p>}
               {!loading && !err && cursos.length === 0 && (
